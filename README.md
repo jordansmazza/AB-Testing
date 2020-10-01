@@ -17,3 +17,15 @@ The output for these queries were incredibly similar, sugesting there is no sign
 
 ---
 ### Part II - A/B Test
+#### Hypotheses:
+**Null: The new page is equally effective as the old page at causing conversions.**
+$$N_{o}$$: $$p_{new}$$ = $$p_{old}$$
+
+**Alternative: The new page is not equally as effective as the old page at causing conversions.**
+$$N_{1}$$: $$p_{new}$$ != $$p_{old}$$
+
+To test these hypothesis, two randomly simulated draws (one for each group) using `np.random.choice()` were run using the conversion rate and group size. This random simulation was then repeated 10,000 times suing a for loop. The results were then displayed via histogram using `plt.hist()`.
+
+A p-value of 0.907 was then computed by using the average conversion rates from the simulations and the actual conversion rate. The p-value is the probability of observing the statistic or something more extreme in favor of the alternative hypothesis given the null hypothesis is true. The high p-value shows it is likely this statistic falls under the null hypothesis, meaning we will most likely fail to reject the null hypothesis. This is consistent with the previous probability findings showing the probabilities of a user converting under each page were incredibly similar.
+
+A similar test was run using `statsmodels.api` to cooborate the previous reuslts as well as find the z_score for this data. The p-value found was 0.905 while the z_score was -1.31. The p-value found using this method is near identical to the p-value found earlier. The z-score is is negative, which shows the statistic lies below the sample mean. The z_score also is around 1 standard deviation from the sample mean. This z-score combined with the high p-value leads further shows we will fail to reject the null hypothesis.
