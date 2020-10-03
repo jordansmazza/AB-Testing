@@ -45,3 +45,7 @@ In order to test if location has a significant effect on conversions, a dataset 
 From the summary of the model, the difference in conversion  based on the user’s country is incredibly minimal. If a user location is `UK`, the conversion rate increases by 0.0507 each unit in comparison to our baseline. for users in `US`, the conversion rate increases by 0.0408. The p-values for these results also suggest there is no statistical impact on conversion rate based on the user's country because they are both greater than 0.05.
 
 Finally, a third regression model is used to test for an interaction between the landing pade and a user's location. The results of this final test shows that there is no significant interaction between the user's location and the page the user received. Both the `ab_page_us` and `ab_page_uk` variables vary minimally from the baseline. This is further confirmed by looking at the p-values for both variables as they are both greater than 0.05.
+
+---
+### Concusions
+Based on all the tests and information throughout this project, the company has failed to reject the null hypothesis. With this information, they have concluded the new webpage is not more effective at generating conversions among users. Knowing this, it would not make sense for them to invest their time and money in replacing the old webpage for the new webpage.
